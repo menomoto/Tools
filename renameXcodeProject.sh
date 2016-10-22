@@ -21,7 +21,7 @@ renameFiles () {
 }
 
 renameWords () {
-	for i in `grep -slr SampleSwiftyJSON *`
+	for i in `grep -slr $oldProject *`
 	do
 		echo $i
 		sed -i '' "s/$oldProject/$newProject/g" $i
